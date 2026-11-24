@@ -23,5 +23,4 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm run typecheck
       - run: npm run build:web
-      - run: node --test test/fengxi-distribution.test.mjs test/fengxi-adapter.test.mjs test/fengxi-shell.test.mjs test/fengxi-real-clients.test.mjs test/fengxi-backup.test.mjs
-      - run: npm run test:components
+      - run: npm test

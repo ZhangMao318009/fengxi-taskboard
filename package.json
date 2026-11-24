@@ -32,7 +32,7 @@
     "typecheck": "tsc -p web/tsconfig.json --noEmit",
     "start": "node server/index.mjs",
     "taskctl": "node cli/taskctl.mjs",
-    "test": "node --test && npm run test:components",
+    "test": "node --test test/fengxi-distribution.test.mjs test/fengxi-adapter.test.mjs test/fengxi-shell.test.mjs test/fengxi-real-clients.test.mjs test/fengxi-backup.test.mjs test/fengxi-attached-technical.test.mjs test/fengxi-autochain.test.mjs test/fengxi-main-binding.test.mjs test/relay-injector-reload.test.mjs test/fengxi-codex.test.mjs && npm run test:components",
     "test:components": "vitest run web/src/components/MarkdownDocument.test.tsx web/src/components/FengxiExecutionPanel.test.tsx --environment jsdom",
     "test:cloud": "node --test test/cloud-shared-worker.test.mjs",
     "cloud:migrate:local": "wrangler d1 migrations apply codex-taskboard-db --local",

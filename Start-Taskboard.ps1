@@ -3,7 +3,7 @@ Push-Location $PSScriptRoot
 try {
     if (-not (Get-Command node -ErrorAction SilentlyContinue)) { throw 'Install Node.js 24 LTS from https://nodejs.org/ first.' }
     if (-not (Test-Path -LiteralPath (Join-Path $PSScriptRoot 'node_modules'))) {
-        & npm.cmd ci
+        & npm.cmd ci --ignore-scripts
         if ($LASTEXITCODE -ne 0) { throw 'Dependency installation failed.' }
     }
     & npm.cmd run build:web

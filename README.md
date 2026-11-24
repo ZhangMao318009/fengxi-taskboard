@@ -9,7 +9,7 @@
 在解压后的目录打开终端，运行以下命令。
 
 ```sh
-npm ci
+npm ci --ignore-scripts
 npm run build:web
 npm start
 ```
@@ -42,8 +42,11 @@ Codex 内嵌入口取决于客户端版本和 CDP 能力。先验证浏览器看
 npm run taskctl -- --help
 npm run typecheck
 npm run build:web
+npm test
 ```
 
 兼容已有的 `CODEX_TASKBOARD_*` 环境变量和 `taskctl` 命令名。`npm run build` 只构建网页，客户端注入通过单独命令显式执行。
+
+默认测试覆盖本地看板和峰浠适配的当前使用范围。仓库保留的上游 AI 聊天、云端和原生发布测试用于后续开发，这些能力在本发行中尚未启用，直接对整个 `test` 目录执行所有测试可能失败。
 
 问题反馈请到本仓库 Issues。提交日志前删除 Token、Cookie、账号信息和任务正文。
