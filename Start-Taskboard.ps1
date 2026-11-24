@@ -1,5 +1,3 @@
-[CmdletBinding()]
-param([switch]$Open)
 $ErrorActionPreference = 'Stop'
 Push-Location $PSScriptRoot
 try {
@@ -12,7 +10,7 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Web build failed.' }
     $port = if ($env:CODEX_TASKBOARD_PORT) { $env:CODEX_TASKBOARD_PORT } else { '47823' }
     if ($port -notmatch '^\d+$' -or [int]$port -lt 1 -or [int]$port -gt 65535) { throw 'Invalid CODEX_TASKBOARD_PORT.' }
-    if ($Open) { Start-Process ('http://127.0.0.1:' + $port) }
+    Write-Host ('Open http://127.0.0.1:' + $port + ' after the listening message appears.')
     & node (Join-Path $PSScriptRoot 'server\index.mjs')
     exit $LASTEXITCODE
 } finally { Pop-Location }

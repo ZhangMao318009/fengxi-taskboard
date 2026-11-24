@@ -14,7 +14,7 @@ npm run build:web
 npm start
 ```
 
-浏览器打开 <http://127.0.0.1:47823>。Windows 用户也可在 PowerShell 中运行 `./Start-Taskboard.ps1 -Open`，脚本会检查依赖、构建网页并启动。该终端关闭后服务停止。
+浏览器打开 <http://127.0.0.1:47823>。Windows 用户也可在 PowerShell 中运行 `./Start-Taskboard.ps1`，脚本会检查依赖、构建网页并启动，出现 listening 提示后再打开上述地址。该终端关闭后服务停止。
 
 默认只监听本机。数据保存在当前用户的 `.fengxi-taskboard` 目录，源码更新时保留这个目录。自定义路径可以设置 `CODEX_TASKBOARD_DATA_DIR`。多实例可设置 `CODEX_TASKBOARD_PORT` 使用不同端口和数据目录。
 
