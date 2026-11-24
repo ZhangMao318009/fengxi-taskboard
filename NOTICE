@@ -1,0 +1,14 @@
+Fengxi Taskboard
+
+This software contains and modifies code from Codex Taskboard / dashi-taskboard
+by chuspeeism and its contributors, based on upstream v1.1.27.
+Upstream source: https://github.com/chuspeeism/dashi-taskboard/tree/v1.1.27
+Upstream license: Apache License 2.0, included in LICENSE.
+
+Fengxi modifications include execution-state and review adapters, task identity
+and recovery handling, multi-entry client support, Fengxi branding, portable
+runtime defaults, and source-distribution documentation.
+See docs/FENGXI-CHANGES.md for the scope of this distribution.
+
+Third-party dependencies retain their respective copyright and license terms.
+Codex and GitHub are trademarks of their respective owners.

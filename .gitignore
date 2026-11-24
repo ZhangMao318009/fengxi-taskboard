@@ -1,0 +1,32 @@
+node_modules/
+.codegraph/
+.fengxi-work/
+dist/
+.data/
+.wrangler/
+.dev.vars*
+.tmp/
+cloud-migration-exports/
+.playwright-cli/
+*.log
+.DS_Store
+/*-proof.png
+/workflow-telemetry.json
+src-tauri/binaries/
+src-tauri/gen/
+src-tauri/resources/
+src-tauri/target/
+
+# Local TB08 acceptance artifacts
+sandbox/
+
+# Private machine state and credentials
+.env
+.env.*
+!.env.example
+*.sqlite*
+*.db
+credentials/
+*.dpapi
+*.pem
+*.key

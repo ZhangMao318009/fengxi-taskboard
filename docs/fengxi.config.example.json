@@ -1,0 +1,7 @@
+{
+  "liveSubmitEnabled": false,
+  "intakeEnabled": false,
+  "pythonPath": "python",
+  "queueClientPath": null,
+  "projectsClientPath": null
+}
